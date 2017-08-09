@@ -1,8 +1,6 @@
 FROM mhart/alpine-node:6.4.0
 
-ADD . .
+RUN npm install sqs-admin -g
 
-RUN npm install
-
-EXPOSE 8001
-CMD ["node", "index.js"]
+EXPOSE 8002
+CMD ["sqs-admin"]
